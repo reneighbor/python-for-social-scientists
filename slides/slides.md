@@ -10,10 +10,11 @@ controls: true
 
 ### Prereqs:
 
-* Python
-* Sublime editor
+* python
 * matplotlib
-* numpy?
+* numpy
+* Sublime editor
+
 
 --
 # Python for Social Scientists
@@ -24,27 +25,50 @@ controls: true
 ### Survey of programming levels in the audience
 
 --
-### Programming for smart people with non-programmer backgrounds
+### Smart non-programmers who want to code
 
 Lazy Sunday reading the New York Times
 
 ![Alt Text](images/reading.png)
---
-
-### Programming for smart people with non-programmer backgrounds
-
-Advice given to new programmers: Pick a project you're passionate about
 
 --
-### Programming for smart people with non-programmer backgrounds
+### Advice given to new programmers: 
 
-Hacking with data is:
-* Interesting!
+Pick a project you're passionate about
+
+--
+### Your project can be answering question X with data
+
+##  Girls-to-boys in primary and secondary school
+* United States
+* El Salvador
+* Pakistan
+
+How do they compare?
+
+--
+### Your project can be answering question X with data
+
+## Girls-to-boys in primary and secondary school
+![Alt Text](images/girls_boys_schooling.png)
+
+### Sidenote: Saudi Arabia
+
+## Girls-to-boys in primary and secondary school
+![Alt Text](images/girls_boys_schooling.png)
+
+
+
+
+--
+### Hacking on data is:
+
+* Interesting
 * Widely available
-* Easy setup
+* Easier setup than web
 
 --
-### Programming for smart people with non-programmer backgrounds
+### Smart non-programmers who *do* code
 
 Lazy Sunday hacking on data
 
@@ -206,8 +230,32 @@ http://matplotlib.org/gallery.html
 
 http://matplotlib.org/examples/api/barchart_demo.html
 
-### MatPlotLib Bar chart simplified
 
-![Alt Text](images/barchart_demo.png)
+-- 
+### Examine the code-- What do we know?
+
+-- 
+### Examine the code-- What do we know?
 
 http://matplotlib.org/examples/api/barchart_demo.html
+* First half is drawing the rects, second is labels
+* Values the list
+* ax.bar(), 
+
+--
+### MatPlotLib Bar chart simplified
+
+* Open the Dropbox public folder
+* Make a new file, basic_chart.py
+* copy the contents of basic_chart.py
+
+-- 
+### In your terminal:
+
+	python basic_chart.py
+
+-- 
+### In your text editor:
+
+# How do we get the other countries data?
+* Uncomment the lines
