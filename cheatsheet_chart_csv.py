@@ -11,8 +11,8 @@ def main():
 	csvfile2 = open('data/childhood_deaths.csv', 'rU')
 	reader2 = csv.DictReader(csvfile2)
 
-	# compareCountries(reader, "United States")
-	compareIndicators(reader, reader2, "Chile")
+	# compareCountries(reader, "United States", "El Salvador", "Saudi Arabia")
+	compareIndicators(reader, reader2, "Nigeria")
 
 	return
 
@@ -36,6 +36,7 @@ def compareIndicators(reader1, reader2, country_name):
 	series2 = ax.bar(index+width, data2.values(), width, color="y")
 
 	ax.set_xticklabels(range(1960, 2013))
+	ax.set_xticks(index+width)
 
 
 	plt.show()
@@ -66,6 +67,7 @@ def compareCountries(reader, country_name1, country_name2 = None, country_name3 
 
 	ax.legend( (series1[0], series2[0], series3[0]), (country_name1, country_name2, country_name3))
 	ax.set_xticklabels(range(1960, 2013))
+	ax.set_xticks(index+width)
 
 	plt.show()
 

@@ -39,7 +39,7 @@ Pick a project you're passionate about
 --
 ### Your project can be answering question X with data
 
-##  Girls-to-boys in primary and secondary school
+Girls-to-boys school attendance ratios (primary and secondary)
 * United States
 * El Salvador
 * Pakistan
@@ -47,17 +47,41 @@ Pick a project you're passionate about
 How do they compare?
 
 --
-### Your project can be answering question X with data
-
-## Girls-to-boys in primary and secondary school
+Girls-to-boys school attendance ratios (primary and secondary)
 ![Alt Text](images/girls_boys_schooling.png)
 
+--
 ### Sidenote: Saudi Arabia
 
-## Girls-to-boys in primary and secondary school
-![Alt Text](images/girls_boys_schooling.png)
+Girls-to-boys school attendance ratios (primary and secondary)
+![Alt Text](images/girls_boys_saudi.png)
 
+--
+### Your project can be answering question X with data
 
+Should development resources be spent on health, or on family planning?
+
+--
+### Sometimes data can provide an answer...
+
+--
+Childhood deaths, children per woman in El Salvador
+![Alt Text](images/el_salvador_births_childhood_deaths.png)
+
+--
+Childhood deaths, children per woman in Bangladesh
+![Alt Text](images/bangladesh_births_childhood_deaths.png)
+
+--
+### Observations aren't always consistent
+
+--
+Childhood deaths, children per woman in Nigeria
+![Alt Text](images/nigeria_births_childhood_deaths.png)
+
+--
+Childhood deaths, children per woman in Estonia
+![Alt Text](images/estonia_births_childhood_deaths.png)
 
 
 --
@@ -92,7 +116,6 @@ Lazy Sunday hacking on data
 
 * data.worldbank.org/indicator
 
-* Export as CSV, Open in Excel
 
 --
 ### World Bank Indicators
@@ -196,8 +219,6 @@ Run it! In your terminal:
 		if row['Country Name'] == "Finland":
 			print row
 
---
-### Follow these steps:
 
 --
 ### Any questions?
@@ -212,9 +233,6 @@ Run it! In your terminal:
 * Every row
 
 --
-## 30 min break
-
---
 # 3. Create interesting visualizations
 
 --
@@ -223,39 +241,60 @@ Run it! In your terminal:
 http://matplotlib.org/gallery.html
 
 
--- 
-### MatPlotLib Bar chart demo
-
 ![Alt Text](images/barchart_demo.png)
 
+
+
+--
+### Examine the code-- What do we know?
 http://matplotlib.org/examples/api/barchart_demo.html
 
-
--- 
+--
 ### Examine the code-- What do we know?
 
--- 
-### Examine the code-- What do we know?
-
-http://matplotlib.org/examples/api/barchart_demo.html
 * First half is drawing the rects, second is labels
 * Values the list
-* ax.bar(), 
 
 --
 ### MatPlotLib Bar chart simplified
 
-* Open the Dropbox public folder
-* Make a new file, basic_chart.py
+* Go to https://github.com/reneighbor/python-for-social-scientists
+* Make a new file in your folder, basic_chart.py
 * copy the contents of basic_chart.py
 
--- 
+--
 ### In your terminal:
 
 	python basic_chart.py
 
--- 
+--
 ### In your text editor:
 
-# How do we get the other countries data?
-* Uncomment the lines
+How do we get the other countries data?
+* In basic_chart.py 2 series, saudi_arabia_data and usa_data
+* Uncomment the commented-out lines
+* Run it again
+
+--
+### Piping in the CSV data
+
+* open chart-csv.py
+* What needs to be done in order to extract data?
+
+--
+### Piping in the CSV data
+
+What needs to be done in order to extract data?
+* Turn data from strings into ints
+* Stip out county names
+* Sort by year
+
+--
+### Give it a try
+
+* Sorted by year
+* Values as numbers, not strings
+* Years as numbers, not strings
+* Values only (list, not a dict)
+
+
