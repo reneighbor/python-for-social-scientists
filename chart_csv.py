@@ -5,7 +5,7 @@ import numpy
 
 def main():
 
-	csvfile = open('data/cellphones.csv', 'rU')
+	csvfile = open('data/fertility.csv', 'rU')
 
 	reader = csv.DictReader(csvfile)
 
@@ -27,10 +27,10 @@ def main():
 	width = 0.35
 
 	rects_finland = ax.bar(finland_index, finland_data, width, color="r")
-	# rects_saudi_arabia = ax.bar(finland_index+width, saudi_arabia_data.values(), width, color="g")
+	# rects_saudi_arabia = ax.bar(finland_index+width, el_salvador_data.values(), width, color="g")
 	# rects_usa = ax.bar(finland_index+2*width, usa_data.values(), width, color="y")
 
-	# ax.legend( (rects_finland[0], rects_saudi_arabia[0], rects_usa[0]), ('Finland', 'United States', 'Saudi Arabia') )
+	# ax.legend( (rects_finland[0], rects_el_salvador[0], rects_usa[0]), ('Finland', 'El Salvador', 'United States') )
 
 	plt.show()
 
