@@ -5,10 +5,13 @@ import numpy
 
 def main():
 
-	csvfile = open('data/cellphones.csv', 'rU')
+	csvfile = open('data/fertility.csv', 'rU')
 	reader = csv.DictReader(csvfile)
 
-	compareCountries(reader, "United States", "Finland", "El Salvador")
+	csvfile2 = open('data/childhood_deaths.csv', 'rU')
+	reader2 = csv.DictReader(csvfile2)
+
+	compareIndicators(reader, reader2, "Finland")
 
 	return
 

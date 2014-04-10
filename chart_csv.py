@@ -1,11 +1,11 @@
 import csv
 import matplotlib.pyplot as plt
 import numpy
-
+import collections
 
 def main():
 
-	csvfile = open('data/fertility.csv', 'rU')
+	csvfile = open('data/childhood_deaths.csv', 'rU')
 
 	reader = csv.DictReader(csvfile)
 
@@ -15,10 +15,11 @@ def main():
 		if row['Country Name'] == 'Finland':
 			finland_data = extractData(row)
 
+		elif row['Country Name'] == 'El Salvador':
+			el_salvador_data = extractData(row)
 
-	# overriding the results of extractData() for now
-	finland_data = [50, 35, 30, 35, 27]
-
+		elif row['Country Name'] == 'United States':
+			usa_data = extractData(row)
 
 	fig = plt.figure()
 	ax = fig.add_subplot(111)
@@ -26,25 +27,33 @@ def main():
 	finland_index = numpy.arange(len(finland_data))
 	width = 0.35
 
-	rects_finland = ax.bar(finland_index, finland_data, width, color="r")
-	# rects_saudi_arabia = ax.bar(finland_index+width, el_salvador_data.values(), width, color="g")
-	# rects_usa = ax.bar(finland_index+2*width, usa_data.values(), width, color="y")
+	rects_finland = ax.bar(finland_index, finland_data.values(), width, color="r")
+	rects_el_salvador = ax.bar(finland_index+width, el_salvador_data.values(), width, color="g")
+	rects_usa = ax.bar(finland_index+2*width, usa_data.values(), width, color="y")
 
-	# ax.legend( (rects_finland[0], rects_el_salvador[0], rects_usa[0]), ('Finland', 'El Salvador', 'United States') )
+	ax.legend( (rects_finland[0], rects_el_salvador[0], rects_usa[0]), ('Finland', 'El Salvador', 'United States') )
 
 	plt.show()
 
 	return
 
 
-# Fill this in
 def extractData(row):
 	data = {}
+	
 
 	for key, value in row.iteritems():
-		data[key] = "FOO"
-		
-	return data
+		if len(key.strip()) == 4:
+			new_val = 0
+			if len(value.strip()) > 0:
+				new_val = float(value)
+
+			data[key] = new_val
+	
+	ordered_row = collections.OrderedDict(sorted(data.items()))
+
+	print ordered_row
+	return ordered_row
 
 
 main()
