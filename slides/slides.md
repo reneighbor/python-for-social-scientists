@@ -2,17 +2,17 @@ title: Python for Social Scientists
 author:
   name: Renee Chu
   twitter: "@reneighbor"
-  url: https://www.surveymonkey.com/s/pycon2014_tutorials
 output: slides.html
 controls: true
-
-
-
 
 --
 # Python for Social Scientists
 
 ## Tutorial, PyCon 2014 Montreal
+
+--
+### Intended audience: 
+People learning to code who have completed a Python workshop or an online class
 
 --
 ### Prereqs:
