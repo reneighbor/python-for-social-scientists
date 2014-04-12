@@ -7,20 +7,20 @@ output: slides.html
 controls: true
 
 
---
 
-### Prereqs:
-
-* python
-* matplotlib
-* numpy
-* Sublime editor
 
 --
 # Python for Social Scientists
 
 ## Tutorial, PyCon 2014 Montreal
 
+--
+### Prereqs:
+
+* python
+* matplotlib
+* numpy
+* text editor
 --
 ### Survey of programming levels in the audience
 
@@ -29,15 +29,13 @@ controls: true
 
 * Econ major, liberal arts college
 * No coding at school
-* Sales and support in tech
-* Learning coding through workshops
+* First job in sales and support
+* Learned coding through workshops (Railsbridge and PyLadies) and online (Stanford Engineering Everywhere, Learn Python the Hard Way)
 
 --
 ### Advice I received:
 
-Pick a project you're passionate about
-
-Your project can be answering question X with data
+Pick a project you're passionate about.
 
 --
 ### Hacking on data is:
@@ -54,27 +52,69 @@ Should development resources be spent on family planning or fighting disease?
 <iframe width="560" height="315" src="http://www.tubechop.com/watch/2507136" frameborder="0" allowfullscreen></iframe>
 
 --
-### Answer some interesting questions:
+### What would we need to be able to verify this on an empirical level for at least one country?
 
-Who has more cellphones per capita:
+* Childhood mortality across years
+* Births per woman across years
+
+--
+### World Bank Data Indicators page
+* Thousands of indicators 
+* 214 Countries
+* 1960-2012
+* http://data.worldbank.org/indicator
+
+--
+### Answer some other interesting questions:
+
+![Alt Text](images/twilio_sms_globe.png)
+
+--
+### Answer some other interesting questions:
+
+Who has more mobile phone subscriptions per 100 people:
 * Finland
 * United States
 
 --
-Cellphones per 100 people
+## Mobile phone subscriptions per 100 people, 1960-2011
+
 ![Alt Text](images/finland_us_cellphones.png)
 
+Source: World Bank, http://data.worldbank.org/indicator/IT.CEL.SETS.P2
 --
 ### Answer some interesting questions:
 
-Who has more cellphones per capita:
+Who has more mobile phone subscriptions per 100 people:
 * Finland
 * United States
 * El Salvador
 
 --
-Cellphones per 100 people
+## Mobile phone subscriptions per 100 people, 1960-2011
 ![Alt Text](images/el_salvador_finland_us_cellphones.png)
+
+--
+### Varying costs of cellphone plans
+
+* US: $59.00/mo
+* Finland: $40.10/mo
+* India: $12.90/mo
+
+Unbundled postpaid total package (voice+sms+data) plans available to individual consumers. 
+Open Technology Initiative (http://newamerica.net/publications/policy/an_international_comparison_of_cell_phone_plans_and_prices)
+
+--
+### Price information from one (largest) carrier
+
+Tigo El Salvador "Basic" mobile postpaid, per min:
+ 
+* Between Tigo: $0.08
+* Other networks: $0.13
+* Landlines: $0.13
+* To USA/Canda: $0.09
+
+http://www.tigo.com.sv/planes-pospago
 
 --
 ### Today we're going to:
@@ -82,7 +122,6 @@ Cellphones per 100 people
 1. Import CSV data into Python
 2. Find a MatPlotLib example
 3. Pipe our CSV data into MatPlotLib
-
 
 --
 # 1. Import CSV data into Python
@@ -96,21 +135,14 @@ git clone https://github.com/reneighbor/python-for-social-scientists.git
 
 
 --
-# What's here?
+### What's here?
 
 python_for_social_scientists/
-	data/
-		fertility.csv
-		childhood_deaths.csv
-	read_data.py
-	chart_csv.py
-
---
-### Where did the data come from?
-
-* Search "World Bank Indicators"
-
-* data.worldbank.org/indicator
+* data/
+*	-	fertility.csv
+*	-	childhood_deaths.csv
+*	read_data.py
+*	chart_csv.py
 
 --
 ### Running a dead-simple program
@@ -129,7 +161,7 @@ python_for_social_scientists/
 	cd Projects/personal-projects/programming-for-social-scientists
 	python read_data.py
 
-* You should see "Hello World" spit back at you
+You should see "Hello World" spit back at you
 
 --
 ### Follow these steps:
@@ -138,36 +170,45 @@ python_for_social_scientists/
 
 	import csv
 
-* libraries are imported
+* libraries are a bunch of functions and helpers written by other people
 
 --
 ### Follow these steps:
 
 	import csv
 
-	csvfile = open('cellphones.csv', 'rU')
-
-* open() is a function
+	csvfile = open('data/childhood_deaths.csv', 'rU')
 
 --
 ### Follow these steps:
 
 	import csv
 
-	csvfile = open('cellphones.csv', 'rU')
+	csvfile = open('data/childhood_deaths.csv', 'rU')
 	reader = csv.DictReader(csvfile)
 
-* DictReader lets you treat the csv file like a dictionary
+* DictReader lets you traverse the contents the csv file like a dictionary
 
 --
 ### This is a Python dictionary
 
 	{
-		'Country Code': 'FIN', 
 		'Country Name': 'Finland', 
+		'Country Code': 'FIN', 
 		'2007': '114.924474', 
 		'2008': '128.4719884',
 		'2009': '144.1530224'
+	}
+
+--
+### * This is a Python dictionary
+
+	{
+		'2007': '114.924474',
+		'2009': '144.1530224' 
+		'Country Name': 'Finland', 
+		'2008': '128.4719884',
+		'Country Code': 'FIN',
 	}
 
 --
@@ -175,7 +216,7 @@ python_for_social_scientists/
 
 	import csv
 
-	csvfile = open('cellphones', 'rU')
+	csvfile = open('data/childhood_deaths', 'rU')
 	reader = csv.DictReader(csvfile)
 
 	for row in reader:
@@ -195,7 +236,7 @@ Run it! In your terminal:
 
 	import csv
 
-	csvfile = open('cellphones', 'rU')
+	csvfile = open('data/childhood_deaths', 'rU')
 	reader = csv.DictReader(csvfile)
 
 	for row in reader:
@@ -254,7 +295,7 @@ http://matplotlib.org/gallery.html
 ### In your text editor:
 
 How do we get the other countries data?
-* In basic_chart.py add 2 series, saudi_arabia_data and usa_data
+* In basic_chart.py add 2 series, el_salvador_data and usa_data
 * Uncomment the commented-out lines
 * Run it again
 
@@ -314,6 +355,10 @@ programming_for_social_scientists compare_indicators_starter.py
 
 --
 ### Give it a try
+
+--
+El Salvador 1960-2013
+![Alt Text](images/el_salvador_mortality_fertility.png)
 
 --
 ### Share what you've written
