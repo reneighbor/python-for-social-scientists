@@ -85,6 +85,7 @@ Who has more mobile phone subscriptions per 100 people:
 ![Alt Text](images/finland_us_cellphones.png)
 
 Source: World Bank, http://data.worldbank.org/indicator/IT.CEL.SETS.P2
+
 --
 ### Answer some interesting questions:
 
