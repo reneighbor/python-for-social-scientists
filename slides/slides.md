@@ -50,7 +50,7 @@ Pick a project you're passionate about.
 ### Answer some interesting questions:
 
 Should development resources be spent on family planning or fighting disease?
-http://www.tubechop.com/watch/2507136
+* http://www.tubechop.com/watch/2507136
 
 <iframe width="560" height="315" src="http://www.tubechop.com/watch/2507136" frameborder="0" allowfullscreen></iframe>
 
