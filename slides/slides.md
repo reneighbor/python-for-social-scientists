@@ -20,7 +20,8 @@ controls: true
 * python
 * matplotlib
 * numpy
-* text editor
+
+
 --
 ### Survey of programming levels in the audience
 
