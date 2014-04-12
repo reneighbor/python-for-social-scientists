@@ -365,8 +365,9 @@ El Salvador 1960-2013
 ![Alt Text](images/el_salvador_mortality_fertility.png)
 
 --
-### Share what you've written
+### Public service announcement:
 
+correlation != causation
 
 --
 ### What we've done:
