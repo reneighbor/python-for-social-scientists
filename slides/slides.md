@@ -99,17 +99,16 @@ Who has more mobile phone subscriptions per 100 people:
 ![Alt Text](images/el_salvador_finland_us_cellphones.png)
 
 --
-### Varying costs of cellphone plans
+### Plans are cheaper in lower-income countries...
 
 * US: $59.00/mo
 * Finland: $40.10/mo
 * India: $12.90/mo
 
-Unbundled postpaid total package (voice+sms+data) plans available to individual consumers. 
-Open Technology Initiative (http://newamerica.net/publications/policy/an_international_comparison_of_cell_phone_plans_and_prices)
+Unbundled total package (voice+sms+data) plans available to individual consumers. (No El Salvador data available.) Open Technology Initiative (http://newamerica.net/publications/policy/an_international_comparison_of_cell_phone_plans_and_prices)
 
 --
-### Price information from one (largest) carrier
+### Prices are much cheaper within-network (incentive for multiple accounts)
 
 Tigo El Salvador "Basic" mobile postpaid, per min:
  
